@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { primaryColor } from '~/constants'
+
 const color = useColorMode()
 
 useHead({
   meta: [{
     id: 'theme-color',
     name: 'theme-color',
-    content: () => color.value === 'dark' ? '#222222' : '#ffffff',
+    content: () => primaryColor,
   }],
 })
 

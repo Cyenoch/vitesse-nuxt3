@@ -4,20 +4,21 @@ const online = useOnline()
 
 <template>
   <div>
-    <Logos mb-6 />
     <Suspense>
-      <ClientOnly>
-        <PageView v-if="online" />
+      <client-only>
+        <app-lang-switch />
+        <div v-if="online">
+          Online
+        </div>
         <div v-else text-gray:80>
           You're offline
         </div>
-      </ClientOnly>
+      </client-only>
       <template #fallback>
         <div italic op50>
           <span animate-pulse>Loading...</span>
         </div>
       </template>
     </Suspense>
-    <InputEntry />
   </div>
 </template>

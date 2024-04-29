@@ -13,11 +13,12 @@ useHead({
   </NuxtLayout>
 </template>
 
-<style>
+<style lang="scss">
+@import '@unocss/reset/tailwind-compat.css' layer(reset);
+
 html,
 body,
 #__nuxt {
-  height: 100vh;
   margin: 0;
   padding: 0;
 }

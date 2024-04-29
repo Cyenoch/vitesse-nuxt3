@@ -9,7 +9,28 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    locales: [{
+      name: 'English',
+      code: 'en',
+      file: 'en.json',
+    }, {
+      name: '中文',
+      code: 'zh',
+      file: 'zh.json',
+    }],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'lang',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+    },
+  },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
@@ -18,10 +39,6 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
     typedPages: true,
   },
-
-  css: [
-    '@unocss/reset/tailwind.css',
-  ],
 
   colorMode: {
     classSuffix: '',
@@ -44,9 +61,8 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width,initial-scale=1',
       link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'icon', href: '/favicon.svg', sizes: 'any' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

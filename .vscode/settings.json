@@ -3,6 +3,8 @@
     "*.css": "postcss"
   },
 
+  "vue.complete.casing.tags": "kebab",
+
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
 
@@ -41,5 +43,11 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+  "cSpell.words": [
+    "Attributify",
+    "gstatic",
+    "Vite"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

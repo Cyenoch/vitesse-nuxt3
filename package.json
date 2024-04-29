@@ -19,6 +19,7 @@
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxt/eslint": "^0.3.9",
     "@nuxtjs/color-mode": "^3.4.0",
+    "@nuxtjs/i18n": "^8.3.1",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/eslint-config": "^0.59.4",
     "@unocss/nuxt": "^0.59.4",
@@ -29,6 +30,7 @@
     "eslint-plugin-format": "^0.1.1",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
+    "sass": "^1.75.0",
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.14"
   }
