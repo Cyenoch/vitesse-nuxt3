@@ -8,6 +8,7 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import { presetExtra } from 'unocss-preset-extra'
 
 export default defineConfig({
   shortcuts: [
@@ -29,6 +30,7 @@ export default defineConfig({
         mono: 'DM Mono',
       },
     }),
+    presetExtra(),
   ],
   transformers: [
     transformerDirectives(),

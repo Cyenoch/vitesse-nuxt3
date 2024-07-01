@@ -31,6 +31,7 @@
     "pinia": "^2.1.7",
     "sass": "^1.77.6",
     "typescript": "^5.5.2",
+    "unocss-preset-extra": "^0.5.3",
     "vue-tsc": "^2.0.24"
   }
 }
