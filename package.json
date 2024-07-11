@@ -13,25 +13,25 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.21.2",
+    "@antfu/eslint-config": "^2.22.0",
     "@iconify-json/carbon": "^1.1.36",
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/color-mode": "^3.4.2",
     "@nuxtjs/i18n": "^8.3.1",
     "@pinia/nuxt": "^0.5.1",
-    "@unocss/eslint-config": "^0.61.0",
-    "@unocss/nuxt": "^0.61.0",
-    "@vite-pwa/nuxt": "^0.8.1",
+    "@unocss/eslint-config": "^0.61.3",
+    "@unocss/nuxt": "^0.61.3",
+    "@vite-pwa/nuxt": "^0.9.1",
     "@vueuse/nuxt": "^10.11.0",
     "consola": "^3.2.3",
     "eslint": "^9.6.0",
     "eslint-plugin-format": "^0.1.2",
-    "nuxt": "^3.12.2",
+    "nuxt": "^3.12.3",
     "pinia": "^2.1.7",
-    "sass": "^1.77.6",
-    "typescript": "^5.5.2",
+    "sass": "^1.77.7",
+    "typescript": "^5.5.3",
     "unocss-preset-extra": "^0.5.3",
-    "vue-tsc": "^2.0.24"
+    "vue-tsc": "^2.0.26"
   }
 }
