@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
 
+  logLevel: 'info',
+
   i18n: {
     locales: [{
       name: 'English',
