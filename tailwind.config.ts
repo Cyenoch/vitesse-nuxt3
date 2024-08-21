@@ -3,8 +3,6 @@ import type { Config as DaisyuiConfig } from 'daisyui'
 import daisyui from 'daisyui'
 import plugin from 'tailwindcss/plugin'
 
-import { dynamicIconsPlugin, iconsPlugin } from '@egoist/tailwindcss-icons'
-
 export default {
   content: [
     './components/**/*.{js,vue,ts}',
@@ -15,11 +13,13 @@ export default {
     './error.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ['Inter'],
+      },
+    },
   },
   plugins: [
-    iconsPlugin(),
-    dynamicIconsPlugin(),
     daisyui,
     plugin(({ addUtilities }) => {
       addUtilities({

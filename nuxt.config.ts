@@ -1,15 +1,32 @@
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
+// use `v-auto-animate` get animation quickly
+// '@vite-pwa/nuxt'
 export default defineNuxtConfig({
+  ssr: false,
+
   modules: [
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode', // '@vite-pwa/nuxt',
+    '@nuxtjs/color-mode',
     '@nuxt/eslint',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
+    '@formkit/auto-animate',
+    '@nuxt/image',
+    '@nuxt/icon',
+    '@vee-validate/nuxt',
+    'dayjs-nuxt',
+    '@nuxt/fonts',
+    '@hebilicious/vue-query-nuxt',
   ],
+
+  dayjs: {
+    locales: ['en', 'zh'],
+    defaultLocale: 'en',
+    plugins: ['utc', 'relativeTime'],
+  },
 
   tailwindcss: {
     viewer: true,

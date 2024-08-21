@@ -5,7 +5,7 @@ const router = useRouter()
 <template>
   <main p="x4 y10" text="center">
     <div text-4xl>
-      <div i-carbon-warning inline-block />
+      <Link name="carbon:warning" />
     </div>
     <div>Not found</div>
     <div>

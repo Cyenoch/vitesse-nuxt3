@@ -19,8 +19,8 @@ function toggleDark() {
 <template>
   <button class="!outline-none btn btn-primary row items-center" @click="toggleDark">
     <div class="swap swap-rotate">
-      <div class="i-carbon-sun" :class="[color.value !== 'dark' ? 'swap-on' : 'swap-off']" />
-      <div class="i-carbon-moon" :class="[color.value === 'dark' ? 'swap-on' : 'swap-off']" />
+      <Icon name="carbon:sun" :class="[color.value !== 'dark' ? 'swap-on' : 'swap-off']" />
+      <Icon name="carbon:moon" :class="[color.value === 'dark' ? 'swap-on' : 'swap-off']" />
     </div>
     <p>{{ color.value }}</p>
   </button>
