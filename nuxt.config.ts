@@ -4,7 +4,7 @@ import { appDescription } from './app/constants/index'
 // use `v-auto-animate` get animation quickly
 // '@vite-pwa/nuxt'
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
 
   future: {
     compatibilityVersion: 4,
