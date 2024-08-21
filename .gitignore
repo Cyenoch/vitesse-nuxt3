@@ -6,3 +6,6 @@ dist
 .env
 .idea/
 .data
+.DS_Store
+.env.local
+.env.*.local
