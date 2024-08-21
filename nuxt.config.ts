@@ -4,13 +4,17 @@ import { appDescription } from './constants/index'
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    '@unocss/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode',
-    // '@vite-pwa/nuxt',
+    '@nuxtjs/color-mode', // '@vite-pwa/nuxt',
     '@nuxt/eslint',
     '@nuxtjs/i18n',
+    '@nuxtjs/tailwindcss',
   ],
+
+  tailwindcss: {
+    viewer: true,
+    cssPath: '~/assets/css/global.scss',
+  },
 
   logLevel: 'info',
 
@@ -45,6 +49,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
+    dataValue: 'theme',
   },
 
   nitro: {
@@ -83,14 +88,16 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  features: {
-    // For UnoCSS
-    inlineStyles: false,
-  },
-
   eslint: {
     config: {
       standalone: false,
+    },
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
 

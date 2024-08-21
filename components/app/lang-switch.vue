@@ -12,20 +12,18 @@ const availableLocales = computed(() => {
   <div col items-start>
     {{ $t("current", { lang: locale }) }}
 
-    <button>
-      <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
-        Set Lang: {{ locale.name }}
-      </NuxtLink>
-    </button>
+    <NuxtLink
+      v-for="{ name, code } in availableLocales"
+      :key="code" :to="switchLocalePath(code)"
+      replace
+    >
+      <button class="btn btn-primary">
+        Set Lang: {{ name }}
+      </button>
+    </NuxtLink>
 
-    <nuxt-link :to="localePath('/hi/123')">
+    <NuxtLink :to="localePath('/hi/123')">
       Go to...
-    </nuxt-link>
+    </NuxtLink>
   </div>
 </template>
-
-<style scoped lang="scss">
-button {
-  @apply bg-gray-8 m-1 cursor-pointer font-bold py-1 px-2;
-}
-</style>
