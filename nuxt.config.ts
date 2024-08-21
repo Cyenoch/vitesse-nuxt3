@@ -1,10 +1,14 @@
 import { pwa } from './config/pwa'
-import { appDescription } from './constants/index'
+import { appDescription } from './app/constants/index'
 
 // use `v-auto-animate` get animation quickly
 // '@vite-pwa/nuxt'
 export default defineNuxtConfig({
   ssr: false,
+
+  future: {
+    compatibilityVersion: 4,
+  },
 
   modules: [
     '@vueuse/nuxt',
