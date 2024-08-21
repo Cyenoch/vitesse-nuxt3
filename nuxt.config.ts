@@ -115,12 +115,5 @@ export default defineNuxtConfig({
     },
   },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-
   compatibilityDate: '2024-07-22',
 })
