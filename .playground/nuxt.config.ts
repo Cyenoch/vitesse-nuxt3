@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: ['../'],
+  extends: ['github:dishi-tech/vitesse-nuxt3#layer'],
 
   future: {
     compatibilityVersion: 4,
