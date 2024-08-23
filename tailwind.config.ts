@@ -35,5 +35,5 @@ export default {
     }),
   ],
   daisyui: {} satisfies DaisyuiConfig,
-  darkMode: ['class', 'data-theme=\'dark\''],
+  darkMode: ['class', '[data-theme=\'dark\']'],
 } satisfies Config

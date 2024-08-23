@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     viewer: true,
-    cssPath: '~/assets/css/global.scss',
+    cssPath: '~/assets/styles/global.scss',
   },
 
   logLevel: 'info',
