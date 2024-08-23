@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { locale, locales } = useI18n()
-const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 
 const availableLocales = computed(() => {
@@ -20,10 +19,6 @@ const availableLocales = computed(() => {
       <button class="btn btn-primary">
         Set Lang: {{ name }}
       </button>
-    </NuxtLink>
-
-    <NuxtLink :to="localePath('/hi/123')">
-      Go to...
     </NuxtLink>
   </div>
 </template>

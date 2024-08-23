@@ -1,6 +1,5 @@
 <template>
-  <main class="p-4 space-y-2">
+  <main>
     <slot />
-    <AppFooter />
   </main>
 </template>

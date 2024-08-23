@@ -1,8 +1,6 @@
-import { pwa } from './config/pwa'
 import { appDescription } from './app/constants/index'
 
 // use `v-auto-animate` get animation quickly
-// '@vite-pwa/nuxt'
 export default defineNuxtConfig({
   ssr: true,
 
@@ -40,6 +38,9 @@ export default defineNuxtConfig({
   logLevel: 'info',
 
   i18n: {
+    lazy: true,
+    langDir: 'lang',
+    vueI18n: './app/config/i18n.ts',
     locales: [{
       name: 'English',
       code: 'en',
@@ -50,14 +51,11 @@ export default defineNuxtConfig({
       file: 'zh.json',
     }],
     defaultLocale: 'en',
-    lazy: true,
-    langDir: 'lang',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root', // recommended
     },
-    vueI18n: './config/i18n.ts',
   },
 
   experimental: {
@@ -79,11 +77,6 @@ export default defineNuxtConfig({
         target: 'esnext',
       },
     },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
-    },
   },
 
   app: {
@@ -103,8 +96,6 @@ export default defineNuxtConfig({
     },
   },
 
-  // pwa,
-
   devtools: {
     enabled: true,
   },
@@ -115,5 +106,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-07-22',
+  compatibilityDate: '2024-08-23',
 })

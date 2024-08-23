@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "build": "nuxi build",
-    "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
     "dev": "nuxi dev",
     "generate": "nuxi generate",
     "prepare": "nuxi prepare",
@@ -29,7 +28,6 @@
     "@tanstack/vue-query": "^5.52.0",
     "@vee-validate/nuxt": "^4.13.2",
     "@vee-validate/zod": "^4.13.2",
-    "@vite-pwa/nuxt": "^0.10.0",
     "@vueuse/nuxt": "^11.0.1",
     "autoprefixer": "^10.4.20",
     "consola": "^3.2.3",
