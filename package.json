@@ -33,7 +33,6 @@
     "@vueuse/nuxt": "^11.0.1",
     "autoprefixer": "^10.4.20",
     "consola": "^3.2.3",
-    "daisyui": "^4.12.10",
     "dayjs-nuxt": "^2.1.9",
     "eslint": "^9.9.0",
     "eslint-plugin-format": "^0.1.2",

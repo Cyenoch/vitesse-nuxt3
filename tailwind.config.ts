@@ -1,6 +1,4 @@
 import type { Config } from 'tailwindcss'
-import type { Config as DaisyuiConfig } from 'daisyui'
-import daisyui from 'daisyui'
 import plugin from 'tailwindcss/plugin'
 
 export default {
@@ -20,7 +18,6 @@ export default {
     },
   },
   plugins: [
-    daisyui,
     plugin(({ addUtilities }) => {
       addUtilities({
         '.row': {
@@ -34,6 +31,5 @@ export default {
       })
     }),
   ],
-  daisyui: {} satisfies DaisyuiConfig,
   darkMode: ['class', '[data-theme=\'dark\']'],
 } satisfies Config
