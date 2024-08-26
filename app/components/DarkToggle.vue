@@ -7,11 +7,11 @@ function toggleDark() {
 </script>
 
 <template>
-  <button class="!outline-none btn btn-primary row items-center" @click="toggleDark">
-    <div class="swap swap-rotate">
-      <Icon name="carbon:sun" :class="[color.value !== 'dark' ? 'swap-on' : 'swap-off']" />
-      <Icon name="carbon:moon" :class="[color.value === 'dark' ? 'swap-on' : 'swap-off']" />
-    </div>
-    <p>{{ color.value }}</p>
-  </button>
+  <Button class="!outline-none space-x-2" @click="toggleDark">
+    <Icon v-if="color.value === 'light'" class="align-middle" name="carbon:sun" />
+    <Icon v-else class="align-middle" name="carbon:moon" />
+    <p class="uppercase">
+      {{ color.value }}
+    </p>
+  </Button>
 </template>

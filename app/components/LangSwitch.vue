@@ -17,12 +17,12 @@ const availableLocales = computed(() => {
       :key="code" :to="switchLocalePath(code)"
       replace
     >
-      <button class="btn btn-primary">
+      <Button>
         Set Lang: {{ name }}
-      </button>
+      </Button>
     </NuxtLink>
 
-    <NuxtLink :to="localePath('/hi/123')">
+    <NuxtLink :to="localePath('/example/hi/123')">
       Go to...
     </NuxtLink>
   </div>
