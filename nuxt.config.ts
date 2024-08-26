@@ -1,5 +1,7 @@
-import { pwa } from './config/pwa'
-import { appDescription } from './app/constants/index'
+import { createResolver } from 'nuxt/kit'
+import { appDescription } from './app/constants'
+
+const { resolve } = createResolver(import.meta.url)
 
 // use `v-auto-animate` get animation quickly
 // '@vite-pwa/nuxt'
@@ -24,6 +26,7 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/fonts',
     '@hebilicious/vue-query-nuxt',
+    'shadcn-nuxt',
   ],
 
   dayjs: {
@@ -34,8 +37,16 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     viewer: true,
-    cssPath: '~/assets/styles/global.scss',
   },
+
+  shadcn: {
+    prefix: '',
+    componentDir: './app/components/ui',
+  },
+
+  css: [
+    resolve('./app/assets/css/tailwind.scss'),
+  ],
 
   logLevel: 'info',
 
@@ -57,7 +68,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root', // recommended
     },
-    vueI18n: './config/i18n.ts',
+    vueI18n: './app/config/i18n.ts',
   },
 
   experimental: {
