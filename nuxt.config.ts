@@ -29,6 +29,12 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
   ],
 
+  fonts: {
+    defaults: {
+      weights: [200, 400, 600, 800],
+    },
+  },
+
   dayjs: {
     locales: ['en', 'zh'],
     defaultLocale: 'en',

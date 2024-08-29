@@ -20,5 +20,7 @@ body,
 #__nuxt {
   margin: 0;
   padding: 0;
+
+  @apply font-inter;
 }
 </style>
