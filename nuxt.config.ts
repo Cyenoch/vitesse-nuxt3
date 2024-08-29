@@ -1,7 +1,7 @@
 import { createResolver } from 'nuxt/kit'
 import { appDescription } from './app/constants'
 
-const { resolve } = createResolver(import.meta.url)
+// const { resolve } = createResolver(import.meta.url)
 
 // use `v-auto-animate` get animation quickly
 // '@vite-pwa/nuxt'
@@ -37,16 +37,13 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     viewer: true,
+    cssPath: './app/assets/css/tailwind.scss',
   },
 
   shadcn: {
     prefix: '',
     componentDir: './app/components/ui',
   },
-
-  css: [
-    resolve('./app/assets/css/tailwind.scss'),
-  ],
 
   logLevel: 'info',
 

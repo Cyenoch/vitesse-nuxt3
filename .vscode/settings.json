@@ -56,5 +56,24 @@
     "Vite"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "radix-vue",
+    "lucide-vue-next",
+    "vue",
+    "@antfu/eslint-config",
+    "@formkit/auto-animate",
+    "@iconify-json/*",
+    "autoprefixer",
+    "consola",
+    "dayjs-nuxt",
+    "eslint",
+    "eslint-plugin-format",
+    "postcss",
+    "sass",
+    "shadcn-nuxt",
+    "tailwindcss",
+    "vue-tsc"
+  ]
 }
