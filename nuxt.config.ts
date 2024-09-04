@@ -3,7 +3,6 @@ import { appDescription } from './app/constants'
 
 // const { resolve } = createResolver(import.meta.url)
 
-// use `v-auto-animate` get animation quickly
 // '@vite-pwa/nuxt'
 export default defineNuxtConfig({
   ssr: true,
@@ -19,7 +18,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
-    '@formkit/auto-animate',
     '@nuxt/image',
     '@nuxt/icon',
     '@vee-validate/nuxt',
@@ -97,6 +95,9 @@ export default defineNuxtConfig({
       crawlLinks: false,
       routes: ['/'],
       ignore: ['/hi'],
+    },
+    experimental: {
+      openAPI: true,
     },
   },
 

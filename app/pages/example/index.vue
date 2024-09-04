@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'example',
+})
+
 const online = useOnline()
 </script>
 
