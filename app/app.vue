@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { appName } from '~/constants'
+import { appName } from '~~/shared/constants'
 
 useHead({
   title: appName,
@@ -13,14 +13,3 @@ useHead({
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<style lang="scss">
-html,
-body,
-#__nuxt {
-  margin: 0;
-  padding: 0;
-
-  @apply font-inter;
-}
-</style>

@@ -1,16 +1,7 @@
 {
   "recommendations": [
-    "antfu.iconify",
-    "antfu.goto-alias",
-    "csstools.postcss",
     "dbaeumer.vscode-eslint",
-    "mikestead.dotenv",
+    "Vue.volar",
     "usernamehw.errorlens",
-    "antfu.file-nesting",
-    "lokalise.i18n-ally",
-    "cipchk.cssrem",
-    "bradlc.vscode-tailwindcss",
-    "austenc.tailwind-docs",
-    "vue.volar"
   ]
 }

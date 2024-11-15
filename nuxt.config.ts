@@ -1,16 +1,7 @@
-import { createResolver } from 'nuxt/kit'
-import { appDescription } from './app/constants'
-
-// const { resolve } = createResolver(import.meta.url)
+import { appDescription } from './shared/constants'
 
 // '@vite-pwa/nuxt'
 export default defineNuxtConfig({
-  ssr: true,
-
-  future: {
-    compatibilityVersion: 4,
-  },
-
   modules: [
     '@vueuse/nuxt',
     '@pinia/nuxt',
@@ -20,12 +11,22 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     '@nuxt/icon',
-    '@vee-validate/nuxt',
     'dayjs-nuxt',
     '@nuxt/fonts',
     '@hebilicious/vue-query-nuxt',
-    'shadcn-nuxt',
   ],
+
+  logLevel: 'info',
+
+  ssr: true,
+
+  compatibilityDate: '2024-07-22',
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  // pwa,
 
   fonts: {
     defaults: {
@@ -44,32 +45,20 @@ export default defineNuxtConfig({
     cssPath: './app/assets/css/tailwind.scss',
   },
 
-  shadcn: {
-    prefix: '',
-    componentDir: './app/components/ui',
-  },
-
-  logLevel: 'info',
-
   i18n: {
     locales: [{
-      name: 'English',
       code: 'en',
       file: 'en.json',
-    }, {
-      name: '中文',
-      code: 'zh',
-      file: 'zh.json',
+      // files: [{path: 'en.ts',cache: false}]
     }],
     defaultLocale: 'en',
     lazy: true,
-    langDir: 'lang',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root', // recommended
     },
-    vueI18n: './app/config/i18n.ts',
+    vueI18n: './shared/config/i18n.ts',
   },
 
   experimental: {
@@ -101,6 +90,19 @@ export default defineNuxtConfig({
     },
   },
 
+  devtools: {
+    enabled: true,
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
+      nuxt: {
+        sortConfigKeys: true,
+      },
+    },
+  },
+
   app: {
     head: {
       viewport: 'width=device-width,initial-scale=1',
@@ -118,17 +120,13 @@ export default defineNuxtConfig({
     },
   },
 
-  // pwa,
-
-  devtools: {
-    enabled: true,
-  },
-
-  eslint: {
-    config: {
-      standalone: false,
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
     },
   },
-
-  compatibilityDate: '2024-07-22',
 })
