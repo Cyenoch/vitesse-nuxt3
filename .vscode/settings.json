@@ -1,11 +1,14 @@
 {
+  "tailwindCSS.experimental.classRegex": ["tw`(.*?)`", "tw\\('(.*?)'\\)", "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"],
+  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "tailwindcss"
   },
   "editor.linkedEditing": true,
   "javascript.preferences.renameMatchingJsxTags": true,
   "typescript.preferences.renameMatchingJsxTags": true,
 
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "vue.complete.casing.tags": "pascal",
   "vue.complete.casing.props": "kebab",
 
@@ -17,10 +20,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
-  },
-
-  "editor.quickSuggestions": {
-    "strings": true
   },
 
   // Silent the stylistic rules in you IDE, but still auto fix them
@@ -37,8 +36,6 @@
     { "rule": "*semi", "severity": "off", "fixable": true }
   ],
 
-  "typescript.tsdk": "node_modules/typescript/lib",
-
   // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
@@ -48,8 +45,6 @@
     "vue",
     "html",
     "markdown",
-    "scss",
-    "css",
     "json",
     "jsonc",
     "yaml",
@@ -64,5 +59,7 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

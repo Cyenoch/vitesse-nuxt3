@@ -1,3 +1,4 @@
+import Aura from '@primevue/themes/aura'
 import { appDescription } from './shared/constants'
 
 // '@vite-pwa/nuxt'
@@ -14,93 +15,13 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/fonts',
     '@hebilicious/vue-query-nuxt',
+    '@primevue/nuxt-module',
   ],
-
-  logLevel: 'info',
 
   ssr: true,
 
-  compatibilityDate: '2024-07-22',
-
-  future: {
-    compatibilityVersion: 4,
-  },
-
-  // pwa,
-
-  fonts: {
-    defaults: {
-      weights: [200, 400, 600, 800],
-    },
-  },
-
-  dayjs: {
-    locales: ['en', 'zh'],
-    defaultLocale: 'en',
-    plugins: ['utc', 'relativeTime'],
-  },
-
-  tailwindcss: {
-    viewer: true,
-    cssPath: './app/assets/css/tailwind.scss',
-  },
-
-  i18n: {
-    locales: [{
-      code: 'en',
-      file: 'en.json',
-      // files: [{path: 'en.ts',cache: false}]
-    }],
-    defaultLocale: 'en',
-    lazy: true,
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root', // recommended
-    },
-    vueI18n: './shared/config/i18n.ts',
-  },
-
-  experimental: {
-    // when using generate, payload js assets included in sw precache manifest
-    // but missing on offline, disabling extraction it until fixed
-    payloadExtraction: false,
-    renderJsonPayloads: true,
-    typedPages: true,
-  },
-
-  colorMode: {
-    classSuffix: '',
-    dataValue: 'theme',
-  },
-
-  nitro: {
-    esbuild: {
-      options: {
-        target: 'esnext',
-      },
-    },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
-    },
-    experimental: {
-      openAPI: true,
-    },
-  },
-
   devtools: {
     enabled: true,
-  },
-
-  eslint: {
-    config: {
-      standalone: false,
-      nuxt: {
-        sortConfigKeys: true,
-      },
-    },
   },
 
   app: {
@@ -120,6 +41,41 @@ export default defineNuxtConfig({
     },
   },
 
+  colorMode: {
+    classSuffix: '',
+    dataValue: 'theme',
+  },
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  experimental: {
+    // when using generate, payload js assets included in sw precache manifest
+    // but missing on offline, disabling extraction it until fixed
+    payloadExtraction: false,
+    renderJsonPayloads: true,
+    typedPages: true,
+  },
+
+  compatibilityDate: '2024-07-22',
+
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+    prerender: {
+      crawlLinks: false,
+      routes: ['/'],
+      ignore: ['/hi'],
+    },
+    experimental: {
+      openAPI: true,
+    },
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -128,5 +84,66 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  logLevel: 'info',
+
+  dayjs: {
+    locales: ['en', 'zh'],
+    defaultLocale: 'en',
+    plugins: ['utc', 'relativeTime'],
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
+      nuxt: {
+        sortConfigKeys: true,
+      },
+    },
+  },
+
+  // pwa,
+
+  fonts: {
+    defaults: {
+      weights: [200, 400, 600, 800],
+    },
+  },
+
+  i18n: {
+    locales: [{
+      code: 'en',
+      file: 'en.json',
+      // files: [{path: 'en.ts',cache: false}]
+    }],
+    defaultLocale: 'en',
+    lazy: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+    },
+    vueI18n: './shared/config/i18n.ts',
+  },
+
+  primevue: {
+    directives: {
+      include: '*',
+    },
+    options: {
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: '.dark',
+        },
+      },
+    },
+  },
+
+  tailwindcss: {
+    viewer: true,
+    cssPath: './app/tailwind.css',
+    editorSupport: true,
   },
 })
