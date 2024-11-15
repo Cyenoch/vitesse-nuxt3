@@ -69,7 +69,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/hi'],
+      ignore: [],
     },
     experimental: {
       openAPI: true,
@@ -124,7 +124,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root', // recommended
     },
-    vueI18n: './shared/config/i18n.ts',
+    vueI18n: './config/i18n.ts',
   },
 
   primevue: {
