@@ -46,6 +46,12 @@ export default defineNuxtConfig({
     dataValue: 'theme',
   },
 
+  runtimeConfig: {
+    public: {
+      apiBase: '',
+    },
+  },
+
   future: {
     compatibilityVersion: 4,
   },

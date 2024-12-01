@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
-</p>
-
 <h2 align="center">
 <a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
 </h2><br>
@@ -33,44 +29,53 @@
 
 - 📲 [PWA](https://github.com/vite-pwa/nuxt) with offline support and auto-update behavior.
 
-## Plugins
+- 🎨 [PrimeVue](https://primevue.org/) - The Most Complete Vue UI Component Library.
 
-### Nuxt Modules
+- 📦 [Nuxt Query](https://tanstack.com/query/v4/docs/framework/vue/overview) - Powerful asynchronous state management, server-state utilities and more.
 
-- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
-- [ColorMode](https://github.com/nuxt-modules/color-mode) - dark and Light mode with auto detection made easy with Nuxt.
+- 🎨 [Icons](https://nuxt.com/modules/icon) - Icons for Nuxt.
 
-- [Pinia](https://github.com/vuejs/pinia) - intuitive, type safe, light and flexible Store for Vue.
-- [VitePWA](https://github.com/vite-pwa/nuxt) - zero-config PWA Plugin for Nuxt 3.
-- [DevTools](https://github.com/nuxt/devtools) - unleash Nuxt Developer Experience.
+- 🎨 [Tailwind](https://tailwindcss.com/) - Tailwind CSS module for Nuxt.
+
+- 🎨 [Fonts](https://nuxt.com/modules/fonts) - Font module for Nuxt.
+
+- 🎨 [I18n](https://nuxt.com/modules/i18n) - Internationalization for Nuxt.
+
+- 🎨 [Eslint](https://eslint.org/) - The pluggable linting utility for JavaScript.
+
+- 🎨 [Color Mode](https://github.com/nuxt-modules/color-mode) - dark and Light mode with auto detection made easy with Nuxt.
+
+- 🎨 [DevTools](https://github.com/nuxt/devtools) - unleash Nuxt Developer Experience.
+
+- 🎨 [Dayjs](https://github.com/iamkun/dayjs) - Day.js utility.
 
 ## IDE
 
 We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable [Vetur](https://vuejs.github.io/vetur/) if you have it).
 
-## Variations
+### VS Code Extensions
+
+- [Volar](https://github.com/johnsoncodehk/volar)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+
+## Original
 
 - [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
 
-## Try it now!
-
-### Online
-
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
+## Try it now
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
+[Create a repo from this template on GitHub](https://github.com/Cyenoch/vitesse-nuxt3/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit antfu/vitesse-nuxt3 my-nuxt3-app
+npx degit Cyenoch/vitesse-nuxt3 my-nuxt3-app
 cd my-nuxt3-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+bun i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
