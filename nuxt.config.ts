@@ -115,7 +115,8 @@ export default defineNuxtConfig({
     locales: [{
       code: 'en',
       file: 'en.json',
-      // files: [{path: 'en.ts',cache: false}]
+      // files: [{path: 'en.ts',cache: false}],
+      name: 'English',
     }],
     defaultLocale: 'en',
     lazy: true,
@@ -143,7 +144,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     viewer: true,
-    cssPath: './app/tailwind.css',
+    cssPath: './app/tailwind.scss',
     editorSupport: true,
   },
 })
