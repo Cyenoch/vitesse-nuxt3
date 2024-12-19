@@ -1,7 +1,7 @@
+import type { Config } from 'tailwindcss'
 import animate from 'tailwindcss-animate'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default <Partial<Config>>{
   darkMode: ['class'],
   safelist: ['dark'],
   prefix: '',

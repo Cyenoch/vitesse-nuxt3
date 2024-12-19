@@ -10,7 +10,10 @@ export default nuxt(
     {
       rules: {
         'no-console': 'warn',
-        'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+        'vue/component-name-in-template-casing': ['error', 'PascalCase', {
+          registeredComponentsOnly: false,
+          ignores: [],
+        }],
       },
     },
   ).toConfigs()),

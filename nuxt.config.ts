@@ -121,9 +121,12 @@ export default defineNuxtConfig({
     locales: [{
       code: 'en',
       file: 'en.json',
+      language: 'en-US',
       // files: [{path: 'en.ts',cache: false}],
       name: 'English',
     }],
+    // TODO:
+    // baseUrl: '',
     defaultLocale: 'en',
     lazy: true,
     detectBrowserLanguage: {
