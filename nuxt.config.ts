@@ -74,7 +74,7 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: false,
-      routes: ['/'],
+      routes: ['/', '/zh'],
       ignore: [],
     },
     experimental: {
@@ -124,6 +124,12 @@ export default defineNuxtConfig({
       language: 'en-US',
       // files: [{path: 'en.ts',cache: false}],
       name: 'English',
+    }, {
+      code: 'zh',
+      file: 'zh.json',
+      language: 'zh-CN',
+      // files: [{path: 'zh.ts',cache: false}],
+      name: '中文',
     }],
     // TODO:
     // baseUrl: '',
