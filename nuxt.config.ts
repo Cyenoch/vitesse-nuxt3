@@ -1,4 +1,5 @@
 import Aura from '@primevue/themes/aura'
+import { AppTheme } from './config/primevue'
 import { appDescription } from './shared/constants'
 
 // '@vite-pwa/nuxt'
@@ -19,6 +20,22 @@ export default defineNuxtConfig({
   ],
 
   ssr: true,
+
+  imports: {
+    presets: [
+      {
+        from: '@vueuse/core',
+        imports: [
+          'useSessionStorage',
+          'useScroll',
+          'watchImmediate',
+          'useElementVisibility',
+          'useWindowScroll',
+          // ...
+        ],
+      },
+    ],
+  },
 
   devtools: {
     enabled: true,
@@ -43,13 +60,18 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
-    dataValue: 'theme',
+    preference: 'light',
+    fallback: 'light',
+    storage: 'cookie',
   },
 
   runtimeConfig: {
     public: {
       apiBase: '',
     },
+  },
+  build: {
+    transpile: ['nuxt', 'primevue', '@primevue/themes'],
   },
 
   future: {
@@ -73,8 +95,7 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
-      crawlLinks: false,
-      routes: ['/', '/zh'],
+      crawlLinks: true,
       ignore: [],
     },
     experimental: {
@@ -135,6 +156,7 @@ export default defineNuxtConfig({
     // baseUrl: '',
     defaultLocale: 'en',
     lazy: true,
+    strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -142,19 +164,16 @@ export default defineNuxtConfig({
     },
     vueI18n: './config/i18n.ts',
   },
-
   primevue: {
     directives: {
       include: '*',
     },
     options: {
-      theme: {
-        preset: Aura,
-        options: {
-          darkModeSelector: '.dark',
-        },
-      },
+      ripple: true,
+      theme: AppTheme,
+
     },
+    autoImport: true,
   },
 
   tailwindcss: {
